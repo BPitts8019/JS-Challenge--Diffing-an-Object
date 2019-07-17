@@ -20,14 +20,14 @@ function getChanges (symbol, source, change) {
 function diff (newCode, oldCode) {
    // const oldCode_breakdown = parseObject(oldCode);
    let deletions = getChanges("-", oldCode, newCode);
-   let additions = getChanges("+", newCode, oldCode);
+   let insertions = getChanges("+", newCode, oldCode);
    // let modifications = [];
 
-   return deletions.concat(additions);
+   return deletions.concat(insertions);
 }
 
 
-//Test Deletions
+//Test Diff
 {
    let nc = {
       apples: 3, 
