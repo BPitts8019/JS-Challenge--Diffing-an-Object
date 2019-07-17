@@ -1,7 +1,7 @@
 # JS-Challenge--Diffing-an-Object
 Ever wonder how tools like `git` parse your source code and determine what you've added and subtracted from the last commit?
 
-Today w're going to build our own diffing tool to compare JavaScript objects full of fruit data!
+Today we're going to build our own diffing tool to compare JavaScript objects full of fruit data!
 
 ### Diffing an Object ###
 Given JavaScript objects like this:
