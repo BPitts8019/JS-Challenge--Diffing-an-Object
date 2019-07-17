@@ -2,7 +2,7 @@ function getChanges (symbol, source, change) {
    let changes = [];
 
    Object.keys(source).forEach(key => {
-      if (!change[key]) {
+      if (!change[key] || source[key] != change[key]) {
          changes.push([symbol, key, source[key]]);
       }
    });
@@ -20,5 +20,5 @@ function diff (oldCode, newCode) {
    console.log(`${insertions.length} insertions(+), ${deletions.length} deletions(-)`);
    
    //return results as one array
-   return insertions.concat(deletions);
+   return deletions.concat(insertions);
 }
