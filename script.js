@@ -10,7 +10,7 @@ function getChanges (symbol, source, change) {
    return changes;
 }
 
-function diff (newCode, oldCode) {
+function diff (oldCode, newCode) {
    // const oldCode_breakdown = parseObject(oldCode);
    let deletions = getChanges("-", oldCode, newCode);
    let insertions = getChanges("+", newCode, oldCode);

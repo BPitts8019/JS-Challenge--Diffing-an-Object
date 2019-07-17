@@ -1,29 +1,32 @@
-//1 insertions, 1 deletions
+let oldCode, newCode;
+
+//insertions only
 {
-   let nc = {
+   oldCode = {
       apples: 3, 
       oranges: 4
-   };
+   }
 
-   let oc = {
+   newCode = {
       apples: 3, 
-      grapes: 5
+      oranges: 4,
+      bananas: 2,
+      kiwi: 10
    };
 
-   console.log(diff(nc, oc));
+   //2 insertions, 0 deletions
+   console.log(diff(oldCode, newCode));
 }
 
-//0 insertions, 0 deletions
-{
-   let nc = {
-      apples: 3, 
-      oranges: 4
-   };
+//deletions only
 
-   let oc = {
-      apples: 3, 
-      oranges: 4
-   };
 
-   console.log(diff(nc, oc));
-}
+//mods only
+
+
+// additions and deletions
+
+
+//additions, deletions, and mods
+
+//no changes
