@@ -1,10 +1,3 @@
-// function parseObject (target) {
-//    return {
-//       keys: Object.keys(target),
-//       values: Object.values(target)
-//    }
-// }
-
 function getChanges (symbol, source, change) {
    let changes = [];
 
@@ -23,21 +16,9 @@ function diff (newCode, oldCode) {
    let insertions = getChanges("+", newCode, oldCode);
    // let modifications = [];
 
-   return deletions.concat(insertions);
-}
-
-
-//Test Diff
-{
-   let nc = {
-      apples: 3, 
-      oranges: 4
-   };
-
-   let oc = {
-      apples: 3, 
-      grapes: 5
-   };
-
-   console.log(diff(nc, oc));
+   //log results
+   console.log(`${insertions.length} insertions(+), ${deletions.length} deletions(-)`);
+   
+   //return results as one array
+   return insertions.concat(deletions);
 }
